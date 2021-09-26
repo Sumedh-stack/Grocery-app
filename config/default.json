@@ -1,0 +1,4 @@
+{
+    "mongoURI" : "mongodb+srv://Sumedh:Sumedh@grocery.xki2u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" ,
+    "jsonTokenSecret" : "mytokensecret"
+}
