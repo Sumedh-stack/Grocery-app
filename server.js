@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const cors = require('cors');
 const app = express();
-
+//Adarsh
 //connect to database
 connectDB();
 
