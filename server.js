@@ -6,6 +6,7 @@ const app = express();
 // sad
 // sd
 //connect to database
+//Change made by pranav
 connectDB();
 
 // Init middleware
