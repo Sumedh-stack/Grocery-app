@@ -1,14 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React,{useState} from 'react';
+import SignInComp from './SignInComp';
+import SignUpComp from './SignUpComp';
 
-import Routes from './routes';
+// const GoogleLogoutButton = props => (
+//   <GoogleLogout
+//    clientId={"64634358040-0c803m7f7d39g9dmqt8hmhmbmudppfcb.apps.googleusercontent.com"}
+//    buttonText="Logout"
+//    onLogoutSuccess={() => {console.log('Alert')}}
+//    onLogoutFailure={err => console.log(err)}
+//   />
+//  )
 
-function App() {  
+function App() {
+
   return (
-    <div >
-		<Router>
-			<Routes/>
-		</Router>
+    // <div className="App">
+    <div className="App">
+       <SignInComp /> 
+        <SignUpComp/>
+       
     </div>
   );
 }
