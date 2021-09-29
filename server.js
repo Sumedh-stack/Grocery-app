@@ -4,6 +4,7 @@ const cors = require('cors');
 const app = express();
 
 //connect to database
+//Change made by pranav
 connectDB();
 
 // Init middleware
