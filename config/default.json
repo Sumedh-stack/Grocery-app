@@ -1,4 +1,4 @@
 {
-    "mongoURI" : "mongodb+srv://Sumedh:Sumedh@grocery.xki2u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" ,
+    "mongoURI" : "mongodb+srv://AdiMall:11235813@cluster0.weuvs.mongodb.net/groceryAppDB?retryWrites=true&w=majority" ,
     "jsonTokenSecret" : "mytokensecret"
 }
