@@ -1,4 +1,6 @@
 import React from 'react';
+import SignInComp from '../SignInComp';
+import SignUpComp from '../SignUpComp';
 import { Fragment } from 'react';
 import '../Home.css';
 function Home() {
@@ -16,8 +18,8 @@ function Home() {
                 <p></p>
                 <h2>get everything you need at your doorstep !</h2>
                 <div className="btn">
-                  <a href="#">login as user</a>
-                  <a href="#">login as vendor</a>
+                  <SignInComp />
+                  <SignUpComp />
                 </div>
               </div>
             </div>
