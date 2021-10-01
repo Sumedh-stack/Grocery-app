@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {GoogleLogin,GoogleLogout} from 'react-google-login';
 import ModalDialog from './ModalDialog';
 import Button from '@material-ui/core/Button';
+import { baseUrl } from './baseUrl';
 import ModalDialog_SignIn from './ModalDialog_SignIn';
 
 
@@ -21,7 +22,7 @@ function SignInComp(){
         <Button variant="contained" color="primary" onClick={handleOpen}>
         SignIn
       </Button>
-      <ModalDialog_SignIn open={open} handleClose={handleClose} /> 
+      <ModalDialog_SignIn open={open} handleClose={handleClose} baseUrl={baseUrl}/> 
         </div>
     )
 }
