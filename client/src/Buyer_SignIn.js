@@ -5,12 +5,12 @@ import SignIn from './SignIn';
 import axios from 'axios';
 import {GoogleLogin,GoogleLogout} from 'react-google-login';
 
-const ModalDialog_SignIn = ({ open, handleClose, baseUrl }) => {
+const Buyer_SignIn = ({ open, handleClose, baseUrl }) => {
   const responseSuccessGoogle = (response) => {
       console.log(response);
       axios({
         method : "POST",
-        url : `${baseUrl}/api/auth/googlelogin`,
+        url : `${baseUrl}/api/auth/buyer/googlelogin`,
         data: {tokenId: response.tokenId}
       }).then(res => {
         console.log("Google Login Success" ,res);
@@ -45,4 +45,4 @@ const ModalDialog_SignIn = ({ open, handleClose, baseUrl }) => {
   );
 };
 
-export default ModalDialog_SignIn;
+export default Buyer_SignIn;

@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
-const User = require("../models/User");
+const Buyer = require("../models/Buyer");
+const Seller = require("../models/Seller");
 const config = require("config");
 const jwt = require("jsonwebtoken");
 const { v4: uuidv4 } = require('uuid');
@@ -11,7 +12,7 @@ const client = new OAuth2Client("997283847932-6kqihc3fgfcvrk6nk7af4cnq2p0h3crk.a
 
 
 
-exports.googlelogin = async (req , res) => {
+exports.sellerlogin = async (req , res) => {
     try{    
         const tokenId = req.body.tokenId;
         console.log(req.body);
@@ -21,14 +22,14 @@ exports.googlelogin = async (req , res) => {
         //res.json({success:true,email_verified,name,email});
 
         if(email_verified){
-            let user = await User.findOne({email}) ;
-            if(user){// if user already exists
+            let seller = await Seller.findOne({email}) ;
+            if(seller){// if user already exists
 
                  //JWT tokens
 
        const payload = {// sending this payload to jwt
-        user :{
-            id : user.id
+        seller :{
+            id : seller.id
         }
            
        }
@@ -48,17 +49,17 @@ exports.googlelogin = async (req , res) => {
             else{// adding new user
 
                 let password = email + uuidv4();
-                let newUser = new User({ 
+                let newSeller = new Seller({ 
                     name ,
                     email ,
                     password ,
                     avatar : picture 
                 }) ;
-                await newUser.save();
+                await newSeller.save();
 
                 const payload = {// sending this payload to jwt
-                    user :{
-                        id : newUser.id
+                    seller :{
+                        id : newSeller.id
                     }
                        
                    }

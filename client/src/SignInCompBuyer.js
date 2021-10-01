@@ -3,9 +3,9 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import ModalDialog from './ModalDialog';
 import Button from '@material-ui/core/Button';
 import { baseUrl } from './baseUrl';
-import ModalDialog_SignIn from './ModalDialog_SignIn';
+import Buyer_SignIn from './Buyer_SignIn';
 
-function SignInComp() {
+function SignInCompBuyer() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -16,9 +16,9 @@ function SignInComp() {
   return (
     <div className="sign-in">
       <Button variant="contained" color="primary" onClick={handleOpen}>
-        SignIn
+        Sign In For Buyer
       </Button>
-      <ModalDialog_SignIn
+      <Buyer_SignIn
         open={open}
         handleClose={handleClose}
         baseUrl={baseUrl}
@@ -27,4 +27,4 @@ function SignInComp() {
   );
 }
 
-export default SignInComp;
+export default SignInCompBuyer;

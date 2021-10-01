@@ -14,15 +14,15 @@ const BuyerSchema = new mongoose.Schema({
     } ,
     rollNo:
     {
-        type:Integer,
+        type:String,
         unique:true,
-        required:true
+        // required:true
     },
 
     password:
     {
         type:String,
-        required:true
+        // required:true
     },
 
     avatar:

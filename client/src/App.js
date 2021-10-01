@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import SignInComp from './SignInComp';
-import SignUpComp from './SignUpComp';
+import SignInCompSeller from './SignInCompSeller';
+import SignInCompBuyer from './SignInCompBuyer';
 import Home from './components/Home';
 // const GoogleLogoutButton = props => (
 //   <GoogleLogout
